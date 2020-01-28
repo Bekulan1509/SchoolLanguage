@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+   android:background="@drawable/love_theme"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Main2Activity">
+
+   <LinearLayout
+       android:layout_width="250dp"
+       android:layout_height="match_parent"
+       android:layout_marginLeft="85dp"
+       android:layout_marginRight="85dp"
+       android:layout_weight="1">
+
+      <Button
+          android:id="@+id/button"
+          android:layout_width="match_parent"
+          android:layout_height="77dp"
+          android:layout_marginVertical="660dp"
+          android:layout_marginBottom="@dimen/fab_margin"
+          android:layout_weight="1"
+          android:text="Love tester"
+          android:textColor="@color/textColor"
+          android:textSize="30dp" />
+
+
+   </LinearLayout>
+
+
+
+
+
+</LinearLayout>
