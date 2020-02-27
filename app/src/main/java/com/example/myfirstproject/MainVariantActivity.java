@@ -15,6 +15,7 @@ public class MainVariantActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_variant);
+
         button1 = findViewById(R.id.buttonVariant1);
         button2 = findViewById(R.id.buttonVariant2);
         button1.setTextColor(Color.BLACK);
