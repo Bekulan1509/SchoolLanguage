@@ -40,14 +40,14 @@
 
 
     <Button
+        android:id="@+id/buttonAnswer"
         android:background="@drawable/fieldes2"
         android:textColor="@color/colorPrimary"
-        android:id="@+id/buttonAnswer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="45sp"
-        android:layout_marginRight="45sp"
-        android:layout_marginTop="50dp"
+        android:layout_marginLeft="70sp"
+        android:layout_marginRight="70sp"
+        android:layout_marginTop="20dp"
         android:text="получить прогноз" />
 
 

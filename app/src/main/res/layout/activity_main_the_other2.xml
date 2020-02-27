@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@drawable/love_photo2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainTheOther2Activity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_weight="1">
+
+        <EditText
+
+            android:id="@+id/editText2"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="180dp"
+            android:layout_marginRight="45dp"
+            android:background="@drawable/fieldes"
+            android:hint="Введите имя девушки"
+            android:inputType="textCapWords"
+            android:padding="15dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/buttonNext2"
+            android:text="next"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="70sp"
+            android:layout_marginRight="70sp"
+            android:layout_marginBottom="150dp"
+            android:background="@drawable/fieldes2"
+            android:textColor="@color/colorPrimary"/>
+    </LinearLayout>
+
+</LinearLayout>

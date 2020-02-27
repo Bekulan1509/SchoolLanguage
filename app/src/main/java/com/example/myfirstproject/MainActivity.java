@@ -1,6 +1,7 @@
 package com.example.myfirstproject;
 
 import androidx.appcompat.app.AppCompatActivity;
+
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.CountDownTimer;
@@ -37,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
 
         buttonSound = MediaPlayer.create(this, R.raw.loosers);
         buttonSound2 = MediaPlayer.create(this, R.raw.winer);
-        buttonSound3 = MediaPlayer.create(this,R.raw.super_winer);
+        buttonSound3 = MediaPlayer.create(this, R.raw.super_winer);
 
 
         button.setOnClickListener(new View.OnClickListener() {
@@ -54,31 +55,31 @@ public class MainActivity extends AppCompatActivity {
 
                 if (text.equals("Bekulan") && text2.equals("Tahmina")) {
                     Toast.makeText(MainActivity.this, "процент вашей совместимости 100%" + "     Вы созданы для друг друга 💘", Toast.LENGTH_LONG).show();
-
+                    buttonSound3.start();
                 } else if (text.equals("Tahmina") && text2.equals("Bekulan")) {
                     Toast.makeText(MainActivity.this, "процент вашей совместимости 100%" + "    Вы созданы для друг друга 💘", Toast.LENGTH_LONG).show();
-
+                    buttonSound3.start();
                 } else if (text.equals("tahmina") && text2.equals("bekulan")) {
                     Toast.makeText(MainActivity.this, "процент вашей совместимости 100%" + "    Вы созданы для друг друга 💘", Toast.LENGTH_LONG).show();
-
+                    buttonSound3.start();
                 } else if (text.equals("bekulan") && text2.equals("tahmina")) {
                     Toast.makeText(MainActivity.this, "процент вашей совместимости 100%" + "    Вы созданы для друг друга 💘", Toast.LENGTH_LONG).show();
-
+                    buttonSound3.start();
                 } else if (text.equals("Бекулан") && text2.equals("Тахмина")) {
                     Toast.makeText(MainActivity.this, "процент вашей совместимости 100%" + "     Вы созданы для друг друга 💘", Toast.LENGTH_LONG).show();
-
+                    buttonSound3.start();
                 } else if (text.equals("Тахмина") && text2.equals("Бекулан")) {
                     Toast.makeText(MainActivity.this, "процент вашей совместимости 100%" + "     Вы созданы для друг друга 💘", Toast.LENGTH_LONG).show();
-
+                    buttonSound3.start();
                 } else if (text.equals("тахмина") && text2.equals("бекулан")) {
                     Toast.makeText(MainActivity.this, "процент вашей совместимости 100%" + "     Вы созданы для друг друга 💘", Toast.LENGTH_LONG).show();
-
+                    buttonSound3.start();
                 } else if (text.equals("1") || text.equals("2") || text.equals("3") || text.equals("4") || text.equals("5") || text.equals("6") || text.equals("7") || text.equals("8") || text.equals("9") || text.equals("0")) {
                     Toast.makeText(MainActivity.this, "уберите цифры!", Toast.LENGTH_LONG).show();
-
+                    buttonSound3.start();
                 } else if (text.equals("бекулан") && text2.equals("тахмина")) {
                     Toast.makeText(MainActivity.this, "процент вашей совместимости 100%" + "    Вы созданы для друг друга 💘", Toast.LENGTH_LONG).show();
-
+                    buttonSound3.start();
                 } else if (text.equals("") && text2.equals("")) {
                     Toast.makeText(MainActivity.this, " Введите  двe имени!", LENGTH_SHORT).show();
 
@@ -93,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
                     buttonSound.start();
 
                 } else if (runNum > 50 && runNum < 80) {
-                    Toast.makeText(MainActivity.this, "Процент вашей совместимости: " + runNum + "%" + "     Вы будете хорошей парой 💞", Toast.LENGTH_LONG).show();
+                 Toast.makeText(MainActivity.this, "Процент вашей совместимости: " + runNum + "%" + "     Вы будете хорошей парой 💞", Toast.LENGTH_LONG).show();
                     buttonSound2.start();
 
                 } else if (runNum > 80) {

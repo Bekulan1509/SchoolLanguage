@@ -7,8 +7,10 @@
     <color name="BLUE">#FF2196F3</color>
     <color name="green">#FF0BCF72</color>
     <color name="grey">#C4C4C4</color>
-    <color name="brown">#C25213</color>
+    <color name="brown">#2D5DAC</color>
     <color name="sky">#FF2196F3</color>
     <color name="textColor">#3A1F8A</color>
+    <color name="color">#207528</color>
+    <color name="red">#CF2020</color>
 
 </resources>
