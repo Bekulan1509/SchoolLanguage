@@ -12,9 +12,11 @@ import java.util.ArrayList;
 
 public class MainAdapter extends RecyclerView.Adapter <MainAdapter.MainViewHolder> {
 ArrayList <String> list;
-public MainAdapter(){
+String razdel1 ="Раздел 1";
+
+    public MainAdapter(){
     list = new ArrayList<>();
-    list.add("Раздел 1");
+    list.add(razdel1);
     list.add("Раздел 2");
     list.add("Раздел 3");
     list.add("Раздел 4");
