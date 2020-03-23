@@ -1,11 +1,13 @@
 package com.example.schoollanguage;
-import android.graphics.Color;
+import android.os.Build;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
@@ -30,6 +32,7 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.MainViewHolder
     }
 
 
+    @RequiresApi(api = Build.VERSION_CODES.M)
     @NonNull
     @Override
     public MainViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -55,29 +58,29 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.MainViewHolder
 
 
         TextView textView;
+        CardView cardView;
+        int position;
 
+        @RequiresApi(api = Build.VERSION_CODES.M)
         public MainViewHolder(@NonNull final View itemView) {
             super(itemView);
             textView = itemView.findViewById(R.id.textView);
+            cardView = itemView.findViewById(R.id.card_view);
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                       int position = getAdapterPosition();
+                       position = getAdapterPosition();
                             mClickListener.onItemClick(position);
-
-
-
                 }
             });
         }
 
         public void bind(ItemTitle itemTitle) {
             textView.setText(itemTitle.getTitle());
-            int pos = getAdapterPosition();
-            switch (pos){
+            switch (getAdapterPosition()) {
                 case 0:
-                    textView.getResources().getColor(R.color.gray);
 
+                    break;
             }
         }
     }
