@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ActivityThemes"></activity>
+        <activity android:name=".RazdelFonetikaActivity"></activity>
+        <activity android:name=".LeksikogrophyActivity" />
+        <activity android:name=".ActivityThemes" />
         <activity android:name=".Razdel1Activity" />
         <activity android:name=".MainActivity">
             <intent-filter>

@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity implements MainAdapter.OnIte
 
         list = new ArrayList<>();
         list.add(new ItemTitle("ЛЕКСИКОЛОГИЯ"));
-        list.add(new ItemTitle("helloo"));
+        list.add(new ItemTitle("ФОНЕТИКА"));
         list.add(new ItemTitle("helloo3"));
         list.add(new ItemTitle("helloo4"));
         list.add(new ItemTitle("helloo5"));
@@ -44,6 +44,12 @@ public class MainActivity extends AppCompatActivity implements MainAdapter.OnIte
         Intent intent = new Intent(this,Razdel1Activity.class);
         startActivity(intent);
 
+    } void openFonetikaRazdel(){
+        Intent intent = new Intent(this,RazdelFonetikaActivity.class);
+        startActivity(intent);
+
+
+
     }
 
     @Override
@@ -53,12 +59,8 @@ public class MainActivity extends AppCompatActivity implements MainAdapter.OnIte
                 openSecond();
                 break;
             case 1:
-            openSecond();
-            break;
-
+                openFonetikaRazdel();
         }
-
-
     }
 }
 

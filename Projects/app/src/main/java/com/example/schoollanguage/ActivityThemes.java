@@ -22,7 +22,7 @@ public class ActivityThemes extends AppCompatActivity {
 
 
         textView.setText(t1);
-        textView.setMovementMethod(new ScrollingMovementMethod());
+        //textView.setMovementMethod(new ScrollingMovementMethod());
 
     }
 }
