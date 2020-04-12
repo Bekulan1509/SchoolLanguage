@@ -16,6 +16,8 @@ public class LeksikogrophyActivity extends AppCompatActivity {
     String t2;
     String t3;
     String t4;
+    int image;
+    int image2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,22 +28,20 @@ public class LeksikogrophyActivity extends AppCompatActivity {
         imageView = findViewById(R.id.image);
 
         t1 = getIntent().getStringExtra("key");
+        image = getIntent().getIntExtra("image", 0);
         t2 = getIntent().getStringExtra("key1");
+
+        tV.setText(t1);
+        imageView.setImageResource(image);
+        textView.setText(t2);
+
+
         t3 = getIntent().getStringExtra("key");
+        image2 = getIntent().getIntExtra("image", 0);
         t4 = getIntent().getStringExtra("key1");
-
-
-        if (t1 == null) {
-            Log.d("lala", "onCreate:  done");
-            tV.setText(t1);
-            imageView.setImageDrawable(getResources().getDrawable(R.drawable.table));
-            textView.setText(t2);
-            return;
-        } else if (t3 != null)
-            tV.setText(t3);
-        imageView.setImageDrawable(getResources().getDrawable(R.drawable.table_2));
+        tV.setText(t3);
+        imageView.setImageResource(image2);
         textView.setText(t4);
-        Log.d("lala", "onCreate:  done1");
 
 
     }
