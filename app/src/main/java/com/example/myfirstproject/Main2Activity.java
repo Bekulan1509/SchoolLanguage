@@ -22,6 +22,7 @@ public class Main2Activity extends AppCompatActivity {
 
         MainThread mainThread = new MainThread();
         mainThread.start();
+
     }
 
     public class MainThread extends Thread {
@@ -39,4 +40,5 @@ public class Main2Activity extends AppCompatActivity {
             }
         }
     }
+
 }

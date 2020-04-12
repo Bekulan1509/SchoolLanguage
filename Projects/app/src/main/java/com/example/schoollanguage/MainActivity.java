@@ -6,11 +6,14 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.example.schoollanguage.Adapters_and_itemTitle_class.ItemTitle;
+import com.example.schoollanguage.Adapters_and_itemTitle_class.MainAdapter;
+
 import java.util.ArrayList;
 
 
 
-public class MainActivity extends AppCompatActivity implements MainAdapter.OnItemClickListener {            
+public class MainActivity extends AppCompatActivity implements MainAdapter.OnItemClickListener {
     RecyclerView recyclerView;
     private MainAdapter adapter;
     private ArrayList<ItemTitle>list;

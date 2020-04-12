@@ -1,4 +1,4 @@
-package com.example.schoollanguage;
+package com.example.schoollanguage.Adapters_and_itemTitle_class;
 import android.os.Build;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,6 +9,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.schoollanguage.R;
 
 import java.util.ArrayList;
 
