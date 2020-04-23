@@ -36,6 +36,7 @@ public class MainTheOtherActivity extends AppCompatActivity {
                     Intent intent = new Intent(MainTheOtherActivity.this, MainTheOther2Activity.class);
                     intent.putExtra("key", boyName + " ❤️ ");
                     startActivity(intent);
+                    finish();
                 }
             }
         });

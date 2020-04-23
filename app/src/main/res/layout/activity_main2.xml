@@ -1,34 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-   android:background="@drawable/love_theme"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/love_theme"
+    android:orientation="vertical"
     tools:context=".Main2Activity">
 
-   <LinearLayout
-       android:layout_width="250dp"
-       android:layout_height="match_parent"
-       android:layout_marginLeft="85dp"
-       android:layout_marginRight="85dp"
-       android:layout_weight="1">
 
-      <Button
-          android:id="@+id/button"
-          android:layout_width="match_parent"
-          android:layout_height="77dp"
-          android:layout_marginVertical="660dp"
-          android:layout_marginBottom="@dimen/fab_margin"
-          android:layout_weight="1"
-          android:text="Love tester"
-          android:textColor="@color/textColor"
-          android:textSize="30dp" />
+   <TextView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginLeft="110dp"
+       android:layout_marginTop="10dp"
+       android:layout_marginRight="100dp"
+       android:layout_weight="1"
+       android:text="Created by : Omorov Bekulan"
+       android:textSize="15dp">
 
+   </TextView>
 
-   </LinearLayout>
-
-
-
-
+   <Button
+       android:id="@+id/button"
+       android:layout_width="match_parent"
+       android:layout_height="77dp"
+       android:layout_marginLeft="50dp"
+       android:layout_marginTop="650dp"
+       android:layout_marginRight="50dp"
+       android:layout_marginBottom="@dimen/fab_margin"
+       android:layout_weight="1"
+       android:text="Love tester"
+       android:textColor="@color/textColor"
+       android:textSize="30dp" />
 
 </LinearLayout>

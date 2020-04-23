@@ -1,5 +1,6 @@
 package com.example.schoollanguage.Adapters_and_itemTitle_class;
 
+import android.os.CountDownTimer;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -80,7 +81,7 @@ public class ActivityTheme1Adapter extends RecyclerView.Adapter<ActivityTheme1Ad
         CardView cardView;
         int position;
         public class Razdel1ViewHolder extends RecyclerView.ViewHolder {
-           public Razdel1ViewHolder(@NonNull View itemView) {
+           public Razdel1ViewHolder(@NonNull final View itemView) {
                super(itemView);
                textView = itemView.findViewById(R.id.textView_razdel1);
                cardView = itemView.findViewById(R.id.card_view_razdel1);
@@ -89,6 +90,19 @@ public class ActivityTheme1Adapter extends RecyclerView.Adapter<ActivityTheme1Ad
                    public void onClick(View v) {
                        position = getAdapterPosition();
                        mClickListener.onItemClick(position);
+                       new CountDownTimer(15, 20) {
+                           @Override
+                           public void onTick(long millisUntilFinished) {
+
+                               itemView.setEnabled(false);
+                           }
+
+                           @Override
+                           public void onFinish() {
+                               itemView.setEnabled(true);
+                           }
+                       }.start();
+
                    }
                });
            }

@@ -30,9 +30,10 @@ public class Main2Activity extends AppCompatActivity {
         public void run() {
             super.run();
             try {
-                MainThread.sleep(2800);
+                MainThread.sleep(2300);
                 Intent intent = new Intent(Main2Activity.this, MainVariantActivity.class);
                 startActivity(intent);
+                finish();
 
 
             } catch (InterruptedException e) {

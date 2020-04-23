@@ -40,6 +40,7 @@ public class MainTheOther2Activity extends AppCompatActivity {
                     intent.putExtra("key1", girlName+" = ");
                     intent.putExtra("key",boy);
                     startActivity(intent);
+                    finish();
 
                 }
 

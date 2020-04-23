@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:padding="16dp"
     android:background="@drawable/photo_love"
     tools:context=".MainTheOtherActivity">
 
@@ -17,7 +18,7 @@
 
             android:id="@+id/editText"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="55dp"
             android:layout_marginLeft="45dp"
             android:layout_marginTop="260dp"
             android:layout_marginRight="45dp"

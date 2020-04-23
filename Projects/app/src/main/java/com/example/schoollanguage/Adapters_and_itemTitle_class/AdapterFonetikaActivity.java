@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.os.CountDownTimer;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,6 +22,7 @@ public class AdapterFonetikaActivity extends RecyclerView.Adapter<AdapterFonetik
     public interface OnItemClickListener {
         void onItemClick(int position);
     }
+
     public void setOnItemClickListener(AdapterFonetikaActivity.OnItemClickListener listener) {
         mClickListener = listener;
 
@@ -50,8 +52,9 @@ public class AdapterFonetikaActivity extends RecyclerView.Adapter<AdapterFonetik
     TextView textView;
     CardView cardView;
     int position;
+
     public class FoneyikaViewHolder extends RecyclerView.ViewHolder {
-        public FoneyikaViewHolder(@NonNull View itemView) {
+        public FoneyikaViewHolder(@NonNull final View itemView) {
             super(itemView);
             textView = itemView.findViewById(R.id.textView_fonetika);
             cardView = itemView.findViewById(R.id.card_view_fonetika);
@@ -60,6 +63,18 @@ public class AdapterFonetikaActivity extends RecyclerView.Adapter<AdapterFonetik
                 public void onClick(View v) {
                     position = getAdapterPosition();
                     mClickListener.onItemClick(position);
+                    new CountDownTimer(15, 20) {
+                        @Override
+                        public void onTick(long millisUntilFinished) {
+
+                            itemView.setEnabled(false);
+                        }
+
+                        @Override
+                        public void onFinish() {
+                            itemView.setEnabled(true);
+                        }
+                    }.start();
                 }
             });
         }

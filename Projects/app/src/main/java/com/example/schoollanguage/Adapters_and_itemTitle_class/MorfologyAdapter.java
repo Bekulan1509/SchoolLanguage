@@ -1,5 +1,5 @@
 package com.example.schoollanguage.Adapters_and_itemTitle_class;
-import android.os.Build;
+
 import android.os.CountDownTimer;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -7,16 +7,15 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.RequiresApi;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.schoollanguage.MorfologyActivity;
 import com.example.schoollanguage.R;
 
 import java.util.ArrayList;
 
-
-public class MainAdapter extends RecyclerView.Adapter<MainAdapter.MainViewHolder> {
+public class MorfologyAdapter extends RecyclerView.Adapter<MorfologyAdapter.MorfologyViewHolder> {
     private OnItemClickListener mClickListener;
     private ArrayList<ItemTitle> list;
 
@@ -30,26 +29,21 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.MainViewHolder
 
     }
 
-    public MainAdapter(ArrayList<ItemTitle> list) {
+    public MorfologyAdapter(ArrayList<ItemTitle> list) {
         this.list = list;
     }
 
 
-    @RequiresApi(api = Build.VERSION_CODES.M)
     @NonNull
     @Override
-    public MainViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.view_holder, parent, false);
-        MainViewHolder mainViewHolder = new MainViewHolder(view);
-
-        return mainViewHolder;
+    public MorfologyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.morfology_view_holder,parent,false);
+        return new MorfologyViewHolder(v);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MainViewHolder holder, int position) {
-        holder.bind(list.get(position));
-
+    public void onBindViewHolder(@NonNull MorfologyViewHolder holder, int position) {
+holder.band(list.get(position));
     }
 
     @Override
@@ -57,23 +51,18 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.MainViewHolder
         return list.size();
     }
 
-    public class MainViewHolder extends RecyclerView.ViewHolder {
-
-
+    public class MorfologyViewHolder extends RecyclerView.ViewHolder {
         TextView textView;
         CardView cardView;
-        int position;
-
-        @RequiresApi(api = Build.VERSION_CODES.M)
-        public MainViewHolder(@NonNull final View itemView) {
+        public MorfologyViewHolder(@NonNull final View itemView) {
             super(itemView);
-            textView = itemView.findViewById(R.id.textView);
-            cardView = itemView.findViewById(R.id.card_view);
+            textView = itemView.findViewById(R.id.textView_morfology);
+            cardView = itemView.findViewById(R.id.card_view_morfology);
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                       position = getAdapterPosition();
-                            mClickListener.onItemClick(position);
+                    int position = getAdapterPosition();
+                    mClickListener.onItemClick(position);
                     new CountDownTimer(15, 20) {
                         @Override
                         public void onTick(long millisUntilFinished) {
@@ -88,17 +77,11 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.MainViewHolder
                     }.start();
                 }
             });
-        }
+                }
 
-        public void bind(ItemTitle itemTitle) {
+
+        public void band(ItemTitle itemTitle) {
             textView.setText(itemTitle.getTitle());
-            switch (getAdapterPosition()) {
-                case 0:
-
-                    break;
-            }
         }
     }
-
 }
-
