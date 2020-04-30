@@ -1,9 +1,12 @@
 package com.example.schoollanguage.Adapters_and_itemTitle_class;
+
 import android.os.Build;
 import android.os.CountDownTimer;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Filter;
+import android.widget.Filterable;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -14,11 +17,58 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.schoollanguage.R;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
 
 
-public class MainAdapter extends RecyclerView.Adapter<MainAdapter.MainViewHolder> {
+public class MainAdapter extends RecyclerView.Adapter<MainAdapter.MainViewHolder> implements Filterable {
     private OnItemClickListener mClickListener;
-    private ArrayList<ItemTitle> list;
+     ArrayList<ItemTitle> list;
+     ArrayList<ItemTitle> allList;
+
+
+
+
+    public MainAdapter(ArrayList<ItemTitle> list) {
+        this.list = list;
+        this.allList = new ArrayList<>(list);
+    }
+
+
+
+    @Override
+    public Filter getFilter() {
+        return filter;
+    }
+
+    Filter filter = new Filter() {
+        @Override
+        protected FilterResults performFiltering(CharSequence constraint) {
+            List<ItemTitle> filteredList = new ArrayList<>();
+            if (constraint.toString().isEmpty()) {
+                filteredList.addAll(allList);
+            } else {
+                for (ItemTitle item : allList) {
+                    if (item.getTitle().toLowerCase().contains(constraint.toString().toLowerCase())) {
+                        filteredList.add(item);
+                    }
+                }
+            }
+          FilterResults  filterResults = new FilterResults();
+           filterResults.values = filteredList;
+
+            return filterResults;
+        }
+
+        @Override
+        protected void publishResults(CharSequence constraint, FilterResults results) {
+            list.clear();
+            list.addAll((Collection<? extends ItemTitle>) results.values);
+            notifyDataSetChanged();
+
+
+        }
+    };
 
     public interface OnItemClickListener {
         void onItemClick(int position);
@@ -30,9 +80,7 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.MainViewHolder
 
     }
 
-    public MainAdapter(ArrayList<ItemTitle> list) {
-        this.list = list;
-    }
+
 
 
     @RequiresApi(api = Build.VERSION_CODES.M)
@@ -72,8 +120,8 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.MainViewHolder
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                       position = getAdapterPosition();
-                            mClickListener.onItemClick(position);
+                    position = getAdapterPosition();
+                    mClickListener.onItemClick(position);
                     new CountDownTimer(15, 20) {
                         @Override
                         public void onTick(long millisUntilFinished) {

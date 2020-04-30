@@ -15,7 +15,7 @@ import java.util.ArrayList;
 public class MorfologyActivity extends AppCompatActivity implements MorfologyAdapter.OnItemClickListener {
     private RecyclerView recyclerView;
     private MorfologyAdapter morfologyAdapter;
-    private ArrayList<ItemTitle> list;
+     ArrayList<ItemTitle> morfolgyList;
 
 
     @Override
@@ -25,21 +25,21 @@ public class MorfologyActivity extends AppCompatActivity implements MorfologyAda
         recyclerView = findViewById(R.id.recyclerView_morfology);
         LinearLayoutManager manager = new LinearLayoutManager(this);
 
-        list = new ArrayList<>();
-        list.add(new ItemTitle(" Грамматика боюнча жалпы маалымат0"));
-        list.add(new ItemTitle("Кыргыз тилинин мифологиясы. Сөз түркүмдөрү1"));
-        list.add(new ItemTitle("Сөз тутуму. Үңгу .Морфема2"));
-        list.add(new ItemTitle("Сөз жасоо3"));
-        list.add(new ItemTitle("Зат атооч4"));
-        list.add(new ItemTitle("Сын атооч5"));
-        list.add(new ItemTitle("Сан атооч6"));
-        list.add(new ItemTitle("Ат атооч7"));
-        list.add(new ItemTitle("Этиш8"));
-        list.add(new ItemTitle("Тактооч9"));
-        list.add(new ItemTitle("Сырдык жана тууранды сөздөр10"));
-        list.add(new ItemTitle("Кызматчы сөз түркүмдөрү11"));
+        morfolgyList = new ArrayList<>();
+        morfolgyList.add(new ItemTitle(" Грамматика боюнча жалпы маалымат0"));
+        morfolgyList.add(new ItemTitle("Кыргыз тилинин мифологиясы. Сөз түркүмдөрү1"));
+        morfolgyList.add(new ItemTitle("Сөз тутуму. Үңгу .Морфема2"));
+        morfolgyList.add(new ItemTitle("Сөз жасоо3"));
+        morfolgyList.add(new ItemTitle("Зат атооч4"));
+        morfolgyList.add(new ItemTitle("Сын атооч5"));
+        morfolgyList.add(new ItemTitle("Сан атооч6"));
+        morfolgyList.add(new ItemTitle("Ат атооч7"));
+        morfolgyList.add(new ItemTitle("Этиш8"));
+        morfolgyList.add(new ItemTitle("Тактооч9"));
+        morfolgyList.add(new ItemTitle("Сырдык жана тууранды сөздөр10"));
+        morfolgyList.add(new ItemTitle("Кызматчы сөз түркүмдөрү11"));
 
-        morfologyAdapter = new MorfologyAdapter(list);
+        morfologyAdapter = new MorfologyAdapter(morfolgyList);
         recyclerView.setLayoutManager(manager);
         recyclerView.setAdapter(morfologyAdapter);
         morfologyAdapter.setOnItemClickListener(MorfologyActivity.this);

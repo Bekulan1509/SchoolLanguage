@@ -19,6 +19,7 @@ public class MorfologyAdapter extends RecyclerView.Adapter<MorfologyAdapter.Morf
     private OnItemClickListener mClickListener;
     private ArrayList<ItemTitle> list;
 
+
     public interface OnItemClickListener {
         void onItemClick(int position);
     }
